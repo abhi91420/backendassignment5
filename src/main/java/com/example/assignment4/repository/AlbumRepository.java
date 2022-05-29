@@ -23,11 +23,6 @@ public class AlbumRepository
         return album;
     }
 
-    public List<Album> getallAlbum()
-    {
-        return albumList;
-    }
-
     public Album getAlbumbyID(int albumID)
     {
         for (Album album:albumList)
@@ -68,5 +63,9 @@ public class AlbumRepository
         }
         return deletedAlbum;
 
+    }
+
+    public List<Album> getallAlbum() {
+        return albumList;
     }
 }
