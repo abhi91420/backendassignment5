@@ -1,0 +1,53 @@
+Add Exceptions and Validations
+
+What you need:
+	If you are using spring boot version greater than 2.2.5 then please add the following dependency:
+
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+
+https://stackoverflow.com/questions/61959918/spring-boot-validations-stopped-working-after-upgrade-from-2-2-5-to-2-3-0
+
+
+Do the followings:
+Apply the following exceptions and validations:
+
+User
+-id
+-name (if name is “root” send a custom exception also handle with @ControllerAdvice)
+-email (add default @Email validation)
+-profilePhotoUrl (add @NotEmpty validation)
+
+Album
+-id
+-name (add @Length with max size 10)
+-coverPhotoUrl
+-createdBy (add a custom validation to allow only lowercase letters(a-z) and numbers)
+-dateCreated
+
+Photo
+-id
+-albumId
+-photoUrl
+-createdBy (add the same custom validation annotation you created for the album model)
+-dateCreated
+
+Comment
+-id
+-photoId
+-message (add a min length restriction of 5 characters)
+-createdBy (add the same custom validation annotation you created for the album model)
+-dateCreated
+
+Add the exceptions handling and validation code as suggested in each of the fields
+Push your code in git
+Pull and Deploy your code in your ec2 instance
+
+Submit the following:
+Submit your api endpoint link, so that I can verify.
+And your github link, I would like to see the code as well.
+
+
+
