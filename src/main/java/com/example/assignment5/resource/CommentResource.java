@@ -1,11 +1,13 @@
-package com.example.assignment4.resource;
+package com.example.assignment5.resource;
 
-import com.example.assignment4.model.Comment;
-import com.example.assignment4.service.CommentService;
+import com.example.assignment5.model.Comment;
+import com.example.assignment5.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -16,7 +18,7 @@ public class CommentResource {
     private CommentService commentService;
 
     @PostMapping
-    public Comment saveComment(@RequestBody Comment comment)
+    public Comment saveComment(@Valid @RequestBody Comment comment)
     {
         return commentService.saveComment(comment);
     }

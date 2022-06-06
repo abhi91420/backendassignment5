@@ -1,7 +1,7 @@
-package com.example.assignment4.service;
+package com.example.assignment5.service;
 
-import com.example.assignment4.model.Comment;
-import com.example.assignment4.repository.CommentRepository;
+import com.example.assignment5.model.Comment;
+import com.example.assignment5.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

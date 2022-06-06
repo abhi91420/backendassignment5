@@ -1,10 +1,15 @@
-package com.example.assignment4.model;
+package com.example.assignment5.model;
+
+import com.example.assignment5.validation.CustomValidation;
+import org.hibernate.validator.constraints.Length;
 
 public class Comment {
 
     private long id;
     private String photoId;
+    @Length(min = 5)
     private String message;
+    @CustomValidation
     private String createdBy;
     private String dateCreated;
 

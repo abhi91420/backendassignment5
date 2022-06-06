@@ -1,10 +1,13 @@
-package com.example.assignment4.model;
+package com.example.assignment5.model;
+
+import com.example.assignment5.validation.CustomValidation;
 
 public class Photo {
 
     private long id;
     private String albumId;
     private String photoUrl;
+    @CustomValidation
     private String createdBy;
     private String dateCreated;
 

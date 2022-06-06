@@ -1,7 +1,7 @@
-package com.example.assignment4.service;
+package com.example.assignment5.service;
 
-import com.example.assignment4.model.User;
-import com.example.assignment4.repository.UserRepository;
+import com.example.assignment5.model.User;
+import com.example.assignment5.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,15 +20,19 @@ public class UserService {
         return userRepository.getAllUsers();
     }
 
-    public User getByID(long userID) {
+    public User getByID(String userID) {
         return userRepository.getUserByID(userID);
     }
 
-    public User updateUser(long id,User user) {
+    public User updateUser(String id,User user) {
         return userRepository.updateUser(id,user);
     }
 
-    public void deleteUser(long userID) {
+    public void deleteUser(String userID) {
         userRepository.getUserByID(userID);
+    }
+
+    public User getByName(String userName){
+       return userRepository.getUserByName(userName);
     }
 }

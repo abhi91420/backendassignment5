@@ -1,6 +1,6 @@
-package com.example.assignment4.repository;
+package com.example.assignment5.repository;
 
-import com.example.assignment4.model.Album;
+import com.example.assignment5.model.Album;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class AlbumRepository
     List<Album> albumList = new ArrayList();
     public static Album getAlbum()
     {
-        Album album = new Album("AlbumName", "ABC", "XYZ");
+        Album album = new Album("AlbumName", "ABC", "efg", "XYZ");
                 return album;
     }
 

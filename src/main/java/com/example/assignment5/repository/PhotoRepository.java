@@ -1,6 +1,6 @@
-package com.example.assignment4.repository;
+package com.example.assignment5.repository;
 
-import com.example.assignment4.model.Photo;
+import com.example.assignment5.model.Photo;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

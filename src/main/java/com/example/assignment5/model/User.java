@@ -1,24 +1,29 @@
-package com.example.assignment4.model;
+package com.example.assignment5.model;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
 public class User {
 
-    private long id;
+    private String id;
     private String name;
+    @Email
     private String email;
+    @NotEmpty
     private String profilePhotoUrl;
 
-    public User(long id, String name, String email, String profilePhotoUrl) {
+    public User(String id, String name, String email, String profilePhotoUrl) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.profilePhotoUrl = profilePhotoUrl;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

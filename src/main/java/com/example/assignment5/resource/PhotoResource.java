@@ -1,9 +1,10 @@
-package com.example.assignment4.resource;
-import com.example.assignment4.model.Photo;
-import com.example.assignment4.service.PhotoService;
+package com.example.assignment5.resource;
+import com.example.assignment5.model.Photo;
+import com.example.assignment5.service.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -12,7 +13,7 @@ public class PhotoResource {
     @Autowired
     private PhotoService photoService;
     @PostMapping
-    public Photo savePhoto(@RequestBody Photo photo)
+    public Photo savePhoto(@Valid @RequestBody Photo photo)
     {
         return photoService.savePhoto(photo);
     }

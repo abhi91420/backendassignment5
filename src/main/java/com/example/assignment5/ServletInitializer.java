@@ -1,4 +1,4 @@
-package com.example.assignment4;
+package com.example.assignment5;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

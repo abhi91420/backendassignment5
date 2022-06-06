@@ -1,10 +1,12 @@
-package com.example.assignment4.resource;
+package com.example.assignment5.resource;
 
-import com.example.assignment4.model.Album;
-import com.example.assignment4.service.AlbumService;
+import com.example.assignment5.model.Album;
+import com.example.assignment5.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,7 +23,7 @@ public class AlbumResource
     }
 
     @PostMapping("/album")
-    public Album saveAlbum(@RequestBody Album album)
+    public Album saveAlbum(@Valid @RequestBody Album album)
     {
         return albumService.saveAlbum(album);
     }

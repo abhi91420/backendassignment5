@@ -1,6 +1,6 @@
-package com.example.assignment4.repository;
+package com.example.assignment5.repository;
 
-import com.example.assignment4.model.User;
+import com.example.assignment5.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,32 +10,41 @@ import java.util.List;
 public class UserRepository {
 
     List<User> userList = new ArrayList();
-    User noUser = new User(0,"n/a","n/a","n/a");
+
     public static User getUser(){
-        User user = new User(1,"name","abc@abc","abc/abc");
+        User user = new User("1","name","abc@abc","abc/abc");
         return user;
     }
 
     public User saveUser(User user){
-        user.setId(userList.size()+1);
+        user.setId(String.valueOf(userList.size()+1));
         userList.add(user);
         return user;
     }
 
-    public User getUserByID(long id){
-
-        for(User user: userList){
-            if(user.getId() == id){
+    public User getUserByName(String name){
+        for(User user :userList){
+            if(user.getName().equals(name)){
                 return user;
             }
         }
-        return noUser;
+        return null;
     }
 
-    public User updateUser(long id, User user){
+    public User getUserByID(String id){
+
+        for(User user: userList){
+            if(user.getId().equals(id)){
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public User updateUser(String id, User user){
 
         for (User a : userList){
-            if(a.getId() == id){
+            if(a.getId().equals(id)){
                 a.setName(user.getName());
                 a.setEmail(user.getEmail());
                 a.setProfilePhotoUrl(user.getProfilePhotoUrl());

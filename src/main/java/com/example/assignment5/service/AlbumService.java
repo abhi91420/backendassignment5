@@ -1,7 +1,7 @@
-package com.example.assignment4.service;
+package com.example.assignment5.service;
 
-import com.example.assignment4.model.Album;
-import com.example.assignment4.repository.AlbumRepository;
+import com.example.assignment5.model.Album;
+import com.example.assignment5.repository.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

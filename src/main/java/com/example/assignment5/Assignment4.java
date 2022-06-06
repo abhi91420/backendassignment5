@@ -1,4 +1,4 @@
-package com.example.assignment4;
+package com.example.assignment5;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
